@@ -1,0 +1,16 @@
+version: 2
+updates:
+  - package-ecosystem: "npm"
+    directory: "/"
+    allow:
+      - dependency-type: "direct"
+    versioning-strategy: increase
+    commit-message:
+      prefix: "chore(deps):"
+    pull-request-branch-name:
+      separator: "-"
+    schedule:
+      interval: "weekly"
+    labels:
+      - "npm"
+      - "dependencies"

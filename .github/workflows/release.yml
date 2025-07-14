@@ -1,0 +1,51 @@
+name: Test + Release
+
+on:
+  pull_request:
+    branches:
+      - main
+
+  push:
+    branch:
+      - main
+jobs:
+  test:
+    name: Test Suite
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        node-version: [20.x, 22.x]
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+      - name: node ${{ matrix.node-version }}
+        uses: actions/setup-node@v1
+        with:
+          node-version: ${{ matrix.node-version }}
+      - name: install
+        run: npm install
+      - name: test
+        run: npm test
+
+  release:
+    name: release
+    needs: test
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+      - uses: actions/setup-node@v1
+        with:
+          node-version: 22
+      - run: npm install
+
+      - name: Publish
+        run: npm run release
+        env:
+          GITHUB_TOKEN: ${{ secrets.PACKAGES_TOKEN }}
+          GIT_AUTHOR_NAME: 'Dependant Bot'
+          GIT_AUTHOR_EMAIL: 'release-bot@codedependant.net'
+          GIT_COMMITTER_NAME: 'Dependant Bot'
+          GIT_COMMITTER_EMAIL: 'release-bot@codedependant.net'
+          NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
