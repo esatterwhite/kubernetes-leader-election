@@ -1,0 +1,31 @@
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: elector
+  labels:
+    app: elector
+spec:
+  selector:
+    matchLabels:
+      app: elector
+  template:
+    metadata:
+      labels:
+        app: elector
+    spec:
+      serviceAccount: core-operator
+      serviceAccountName: core-operator
+      containers:
+        - name: elector
+          image: elector:latest
+          command:
+            - node
+          args:
+            - 'tilt/app/elector.js'
+          env:
+            - name: POD_NAME
+              valueFrom:
+                fieldRef:
+                  apiVersion: v1
+                  fieldPath: metadata.name

@@ -1,0 +1,11 @@
+node_modules/
+*.tgz
+compose/
+node_modules/
+coverage/
+deployment/
+.github/
+.luarocks
+.git
+tools/
+kubeconfig
