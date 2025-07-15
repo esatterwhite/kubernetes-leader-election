@@ -1,0 +1,23 @@
+load('ext://deployment', 'deployment_create')
+k8s_yaml('./app/leader-election.yaml', allow_duplicates=True)
+k8s_resource(
+  objects = [
+    'core-operator:serviceaccount'
+  , 'core-operator:clusterrole'
+  , 'operator:clusterrolebinding'
+  ]
+, new_name = 'config'
+, labels = ['elector']
+)
+docker_build(
+  'elector'
+, '../'
+, dockerfile = '../Dockerfile'
+)
+
+k8s_yaml('app/deployment.yaml', allow_duplicates=True)
+k8s_resource(
+  'elector'
+, labels=['elector']
+, resource_deps=['config']
+)
