@@ -17,6 +17,14 @@ jobs:
         node-version: [20.x, 22.x]
 
     steps:
+      - name: Kubernetes KinD Cluster
+        id: kind
+        uses: helm/kind-action@v1
+        with:
+          registry: true
+          registry_name: my-registry
+          registry_port: 5001
+          registry_enable_delete: true
       - name: Checkout
         uses: actions/checkout@v2
       - name: node ${{ matrix.node-version }}

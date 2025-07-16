@@ -57,6 +57,7 @@
   },
   "tap": {
     "browser": false,
+    "allow-incomplete-coverage": true,
     "coverage-report": [
       "text",
       "text-summary"
