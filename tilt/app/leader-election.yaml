@@ -1,4 +1,4 @@
-
+---
 apiVersion: v1
 kind: ServiceAccount
 metadata:
@@ -9,29 +9,29 @@ kind: ClusterRole
 metadata:
   name: core-operator
 rules:
-- apiGroups:
-  - ""
-  - coordination.k8s.io
-  resources:
-  - configmaps
-  - secrets
-  - leases
-  - keypairs
-  verbs:
-  - get
-  - list
-  - watch
-  - create
-  - update
-  - patch
-  - delete
-- apiGroups:
-  - ""
-  resources:
-  - events
-  verbs:
-  - create
-  - patch
+  - apiGroups:
+      - ""
+      - coordination.k8s.io
+    resources:
+      - configmaps
+      - secrets
+      - leases
+      - keypairs
+    verbs:
+      - get
+      - list
+      - watch
+      - create
+      - update
+      - patch
+      - delete
+  - apiGroups:
+      - ""
+    resources:
+      - events
+    verbs:
+      - create
+      - patch
 ---
 apiVersion: rbac.authorization.k8s.io/v1
 kind: ClusterRoleBinding
