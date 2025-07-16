@@ -1,0 +1,6 @@
+#!/usr/bin/env node
+'use strict'
+
+const kubernetes = require('../test/common/kubernetes.js')
+
+process.stdout.write(kubernetes.clusterHost())
