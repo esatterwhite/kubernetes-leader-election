@@ -25,7 +25,7 @@ var elector = new Elector({
   auto_close: true
 , log: log
 , lease_name: 'k8s-election-test'
-, leader_identity: `election-test-${process.pid}`
+, identity: `election-test-${process.pid}`
 })
 
 module.exports = elector
