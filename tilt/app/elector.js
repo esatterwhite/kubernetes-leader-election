@@ -10,6 +10,7 @@ const log = pino({
       return {
         name: values.name
       , pod: process.env.POD_NAME
+      , identity: `election-test-${process.pid}`
       }
     }
   , level(level) {
@@ -20,11 +21,16 @@ const log = pino({
 
 const Elector = require('../../lib/elector.js')
 
+var elector = new Elector({
+  auto_close: true
+, log: log
+, lease_name: 'k8s-election-test'
+, leader_identity: `election-test-${process.pid}`
+})
+
+module.exports = elector
+
 if (module === require.main) {
-  var elector = new Elector({
-    auto_close: true
-  , log: log
-  , leader_identity: process.env.POD_NAME
-  })
   elector.bootstrap()
 }
+
