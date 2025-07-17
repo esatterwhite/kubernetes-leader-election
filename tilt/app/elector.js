@@ -31,6 +31,6 @@ var elector = new Elector({
 module.exports = elector
 
 if (module === require.main) {
-  elector.bootstrap()
+  elector.start()
 }
 

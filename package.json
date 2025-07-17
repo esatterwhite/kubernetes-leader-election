@@ -23,6 +23,7 @@
     "start": "tilt up -f tilt/Tiltfile",
     "stop": "tilt down -f tilt/Tiltfile",
     "tap": "tap",
+    "posttap": "npm run c8:report",
     "test": "scripts/test-ci.sh"
   },
   "author": "Eric Satterwhite <esatterwhite@wi.rr.com>",
