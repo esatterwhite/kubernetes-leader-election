@@ -5,7 +5,7 @@ const pino = require('pino')
 module.exports = log
 
 const DEFAULTS = {
-  level: 'debug'
+  level: process.env.LOGLEVEL || 'debug'
 , messageKey: 'message'
 }
 
