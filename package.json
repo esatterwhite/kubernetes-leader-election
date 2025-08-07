@@ -29,7 +29,7 @@
   "author": "Eric Satterwhite <esatterwhite@wi.rr.com>",
   "repository": {
     "type": "git",
-    "url": "git+ssh://git@github.com/esatterwhite/kubernetes-leader-election.git"
+    "url": "https://github.com/esatterwhite/kubernetes-leader-election"
   },
   "homepage": "https://github.com/esatterwhite/kubernetes-leader-election",
   "bugs": {
@@ -37,7 +37,7 @@
   },
   "license": "SEE LICENSE IN LICENSE",
   "publishConfig": {
-    "public": true
+    "access": "public"
   },
   "keywords": [
     "kubernetes",
