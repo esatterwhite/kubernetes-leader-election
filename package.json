@@ -37,7 +37,7 @@
   },
   "license": "SEE LICENSE IN LICENSE",
   "publishConfig": {
-    "public": true
+    "access": "public"
   },
   "keywords": [
     "kubernetes",
