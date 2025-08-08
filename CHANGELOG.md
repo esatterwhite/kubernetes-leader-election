@@ -1,3 +1,10 @@
+## [1.0.1](https://github.com/esatterwhite/kubernetes-leader-election/compare/v1.0.0...v1.0.1) (2025-08-08)
+
+
+### Chores
+
+* **ci**: use the built-in github token for actions [bad911c](https://github.com/esatterwhite/kubernetes-leader-election/commit/bad911c30b68225aa28603a1be2d0793cf30372f) - Eric Satterwhite
+
 # 1.0.0 (2025-08-07)
 
 
