@@ -5,7 +5,7 @@ Leader election for kubernetes using leases
 ### Installation
 
 ```bash
-npm install @codedpendant/kubernetes-leader-election -- save
+npm install @codedependant/kubernetes-leader-election -- save
 ```
 
 
