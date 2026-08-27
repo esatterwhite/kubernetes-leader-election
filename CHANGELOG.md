@@ -1,3 +1,20 @@
+## [1.0.2](https://github.com/esatterwhite/kubernetes-leader-election/compare/v1.0.1...v1.0.2) (2026-08-27)
+
+
+### Bug Fixes
+
+* **release**: add npm trusted publishing [3a2045d](https://github.com/esatterwhite/kubernetes-leader-election/commit/3a2045d1c47f325c58092217cf56b9f7e925d3d1) - Eric Satterwhite
+
+
+### Chores
+
+* **deps**: codedependant/release-config-core@1.1.1 [a507337](https://github.com/esatterwhite/kubernetes-leader-election/commit/a50733749e5a69fe2b6203836f1b2877a441bbf6) - Eric Satterwhite
+
+
+### Miscellaneous
+
+* Update README.md [1d657e5](https://github.com/esatterwhite/kubernetes-leader-election/commit/1d657e5c16bab95b774eb96e47b63c429c1de563) - Eric Satterwhite
+
 ## [1.0.1](https://github.com/esatterwhite/kubernetes-leader-election/compare/v1.0.0...v1.0.1) (2025-08-08)
 
 
