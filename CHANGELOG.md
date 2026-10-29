@@ -1,3 +1,10 @@
+## [1.0.3](https://github.com/esatterwhite/kubernetes-leader-election/compare/v1.0.2...v1.0.3) (2026-10-29)
+
+
+### Chores
+
+* **deps**: update yaml requirement from ^2.8.0 to ^2.8.1 [2287675](https://github.com/esatterwhite/kubernetes-leader-election/commit/22876755bc999b483034aeac1f8a7566529f70d0) - Eric Satterwhite
+
 ## [1.0.2](https://github.com/esatterwhite/kubernetes-leader-election/compare/v1.0.1...v1.0.2) (2026-08-27)
 
 
